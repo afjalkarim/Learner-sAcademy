@@ -1,0 +1,27 @@
+package ansari;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class StudentDAO {
+	
+public int insertStudent(Student stud1) throws ClassNotFoundException, SQLException {
+		
+		Connection con=ClassdBConnection.getConn();
+		String sql="insert into class values(?,?,?)";
+		
+		
+		PreparedStatement ps=con.prepareStatement(sql);
+		
+		ps.setInt(1, stud1.getSid());
+		ps.setString(2, stud1.getsFirstName());
+		ps.setString(3, stud1.getsLastName());
+		/*ps.setString(4, stud1.getsDob());
+		ps.setString(5, stud1.getsAddress());
+		ps.setString(6, stud1.getsPhone());
+		ps.setString(7, stud1.getsClass());*/
+		return ps.executeUpdate();		
+	}
+
+}

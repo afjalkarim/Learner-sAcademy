@@ -1,0 +1,37 @@
+<%@ page import="ansari.*" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+
+int sid=Integer.parseInt(request.getParameter("sid"));
+String sFirstName=request.getParameter("sfirstname");
+String sLastName=request.getParameter("slastname");
+String sDob=request.getParameter("sdob");
+String sAddress=request.getParameter("saddress");
+String sPhone=request.getParameter("sphone");
+
+ Student stud1=new Student();
+/*class1.setClassid(classid);
+class1.setClassName(classname);
+
+ClassDAO dao=new ClassDAO();
+
+int row=dao.insertStudentClass(class1);
+if(row>0){
+	out.println("Class Saved Successfully");
+	
+}else{
+		out.println("Class Not Saved");
+}*/
+
+
+%>
+</body>
+</html>

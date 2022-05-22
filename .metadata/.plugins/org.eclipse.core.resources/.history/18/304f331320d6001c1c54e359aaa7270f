@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div style="text-align:center;">
+<h3 style="Color:blue">Learner's Academy</h3>
+<h4 style="Color:cyan">Welcome To Admin Dashboard</h4>
+</div>
+<div>
+<form>
+<table  border="2" style="text-align:center;  margin-left:auto;margin-right:auto;" >
+<tr>
+<th style="background:Black;color:white">S.No</th>
+<th style="background:Black;color:white">Task</th>
+<th style="background:Black;color:white" colspan=4>Action</th>
+</tr>
+<tr>
+<th style="background:Black;color:white">1</th>
+<th style="background:Black;color:white">Class</th>
+<td><a href="#">add</a></td>
+<td><a href="#">delete</a></td>
+<td><a href="#">modify</a></td>
+<td><a href="#">view Report</a></td>
+</tr>
+<tr>
+<th style="background:Black;color:white">2</th>
+<th style="background:Black;color:white">Student</th>
+<td><a href="#">add</a></td>
+<td><a href="#">delete</a></td>
+<td><a href="#">modify</a></td>
+<td><a href="#">view Report</a></td>
+</tr>
+<tr>
+<th style="background:Black;color:white">3</th>
+<th style="background:Black;color:white">Subjects</th>
+<td><a href="#">add</a></td>
+<td><a href="#">delete</a></td>
+<td><a href="#">modify</a></td>
+<td><a href="#">view Report</a></td>
+</tr>
+<tr>
+<th style="background:Black;color:white">4</th>
+<th style="background:Black;color:white">Teachers</th>
+<td><a href="#">add</a></td>
+<td><a href="#">delete</a></td>
+<td><a href="#">modify</a></td>
+<td><a href="#">view Report</a></td>
+</tr>
+</table>
+</form>
+</div>
+<div style="text-align:center;">
+<h3 style="Color:blue"><input type="submit" value="Logout"></h3>
+</div>
+
+
+</body>
+</html>

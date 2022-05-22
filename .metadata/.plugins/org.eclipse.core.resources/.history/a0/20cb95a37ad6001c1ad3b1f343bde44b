@@ -1,0 +1,18 @@
+package com.ansari;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class ClassDAO {
+	
+	public int insertStudentClass(ClassForStudent class1) throws ClassNotFoundException, SQLException {
+		
+		Connection con=ClassdBConnection.getConn();
+		String sql="insert into class values(?,?)";
+		PreparedStatement ps=con.prepareStatement(sql);
+		ps.setInt(1, class1.getClassid());
+		ps.setString(2, class1.getClassName());
+		return ps.executeUpdate();		
+	}
+
+}

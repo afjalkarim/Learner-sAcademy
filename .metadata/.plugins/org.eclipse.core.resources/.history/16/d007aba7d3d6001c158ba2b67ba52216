@@ -1,0 +1,19 @@
+package ansari;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class SubjectDAO {
+	
+	public int insertSubject(Subjects sub1) throws ClassNotFoundException, SQLException {
+		
+		Connection con=ClassdBConnection.getConn();
+		String sql="insert into subjects values(?,?)";
+		PreparedStatement ps=con.prepareStatement(sql);
+		ps.setInt(1, sub1.getSubjectId());
+		ps.setString(2, sub1.getSubjectName());
+		return ps.executeUpdate();		
+	}
+
+}

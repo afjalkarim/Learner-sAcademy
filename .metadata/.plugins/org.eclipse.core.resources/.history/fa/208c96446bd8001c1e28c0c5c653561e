@@ -1,0 +1,30 @@
+
+
+public class AssignSubjectToTeacher {
+	
+	private String classname;
+	private String subjectname;
+	private String tecahername;
+	
+	public String getClassname() {
+		return classname;
+	}
+	public void setClassname(String classname) {
+		this.classname = classname;
+	}
+	public String getSubjectname() {
+		return subjectname;
+	}
+	public void setSubjectname(String subjectname) {
+		this.subjectname = subjectname;
+	}
+	public String getTecahername() {
+		return tecahername;
+	}
+	public void setTecahername(String tecahername) {
+		this.tecahername = tecahername;
+	}
+	
+	
+
+}

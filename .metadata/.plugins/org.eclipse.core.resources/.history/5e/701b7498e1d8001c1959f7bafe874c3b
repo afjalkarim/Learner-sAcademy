@@ -1,0 +1,48 @@
+<%@ page import="ansari.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Welcome To Class Report</h1>
+<div style="text-align:center;">
+<h5 style="Color:green">Report Of Class</h5>
+</div>
+<form action="admindashboard.jsp" method="post">
+<table align=center border=1>
+<%
+String classname =request.getParameter("classname");
+
+AssignSubjectToTeacher subandteacher=new AssignSubjectToTeacher();
+subandteacher.setClassname(classname);
+
+
+AssignSubjectAndTeacherDAO dao=new AssignSubjectAndTeacherDAO();
+List<AssignSubjectToTeacher> subjectteacherpojo=(List<AssignSubjectToTeacher>)dao.view(subandteacher);
+%>
+<tr>
+<th>Class Name</th>
+<th>Subject Name</th>
+<th>Teacher Name</th>
+</tr>
+<% for(AssignSubjectToTeacher c:subjectteacherpojo){ %>
+<tr>
+<td align=center><%=c.getClassname() %></td>
+<td align=center><%=c.getSubjectname() %></td>
+<td align=center><%=c.getTeachername() %></td>
+</tr>
+<%} %>
+</table>
+<div style="text-align:center;">
+<h3 style="Color:blue"><input type="submit" value="Back To Dashboard"></h3>
+</div>
+</form>
+</body>
+</html>

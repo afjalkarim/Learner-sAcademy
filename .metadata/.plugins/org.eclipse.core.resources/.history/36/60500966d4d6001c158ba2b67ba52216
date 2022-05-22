@@ -1,0 +1,35 @@
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class SubjectDAO {
+	
+	public int insertSubject(Subjects sub1) throws ClassNotFoundException, SQLException {
+		
+		Connection con=ClassdBConnection.getConn();
+		String sql="insert into subjects values(?,?)";
+		PreparedStatement ps=con.prepareStatement(sql);
+		ps.setInt(1, sub1.getSubjectId());
+		ps.setString(2, sub1.getSubjectName());
+		return ps.executeUpdate();		
+	}
+	public List<Subjects> view() throws ClassNotFoundException, SQLException {
+		List<Subjects> List=new ArrayList<Subjects>();
+		Connection con=ClassdBConnection.getConn();;
+		String sql="select * from subjects";
+		PreparedStatement ps=con.prepareStatement(sql);
+		ResultSet rs=ps.executeQuery();
+		while(rs.next()) {
+			Subjects subjectpojo=new Subjects();
+			subjectpojo.setSubjectId(rs.getInt(1));
+			subjectpojo.setSubjectName(rs.getString(2));		
+			List.add(subjectpojo);
+		}
+		return List;	
+	}
+}

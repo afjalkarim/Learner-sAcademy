@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+G:\Learner's Academy\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2093263176.index
+1239008703.index
+501127319.index
+3365190025.index
+2443949530.index
+1141813840.index

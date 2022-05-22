@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div style="text-align:center;">
+<h3 style="Color:blue">Learner's Academy</h3>
+<h4 style="Color:brown">Welcome To Admin Dashboard</h4>
+</div><hr>
+<h1>Assign Class To Student</h1>
+<form action="insertClassToStudent.jsp" method="post">
+<table   style="text-align:center;  margin-left:auto;margin-right:auto;">
+<tr>
+<td>Select Student
+<Select name="student">
+<option>Hassan</option>
+</Select></td>
+</tr>
+<tr>
+<td>Select Class
+<Select name="class">
+<option>BCA</option>
+</Select></td>
+</tr>
+</table>
+<div style="text-align:center;">
+<h3 style="Color:blue"><input type="submit" value="Assign"></h3>
+</div>
+</form>
+</div>
+</body>
+</html>

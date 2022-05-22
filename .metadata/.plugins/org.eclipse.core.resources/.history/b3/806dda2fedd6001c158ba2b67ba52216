@@ -1,0 +1,46 @@
+<%@ page import="ansari.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <div style="text-align:center;">
+<h3 style="Color:blue">Learner's Academy</h3>
+<h4 style="Color:brown">Welcome To Admin Dashboard</h4>
+<hr>
+<h5 style="Color:green">List Of Classes</h5>
+</div> 
+<p align=center><%@include file="admindashboard.jsp"%></p>
+-->
+<div style="text-align:center;">
+<h5 style="Color:green">List Of Classes</h5>
+</div>
+<table align=center border=1>
+<% ClassDAO dao=new ClassDAO();
+List<ClassForStudent> classpojo=(List<ClassForStudent>)dao.view();
+%>
+<tr>
+<th>Class Id</th>
+<th>Class Name</th>
+<th colspan=4>Action</th>
+</tr>
+<% for(ClassForStudent c:classpojo){ %>
+<tr>
+<td align=center><%=c.getClassid() %></td>
+<td align=center><%=c.getClassName() %></td>
+<td align=center><a href="edit.jsp">Edit</a></td>
+<td align=center><a href="delete.jsp">Delete</a></td>
+<td align=center><a href="assignSubandTeacher.jsp">Teachers & Subject</a></td>
+</tr>
+<%} %>
+</table>
+<p align=center><%@include file="ViewClassList.jsp"%></p>
+</body>
+</html>
+

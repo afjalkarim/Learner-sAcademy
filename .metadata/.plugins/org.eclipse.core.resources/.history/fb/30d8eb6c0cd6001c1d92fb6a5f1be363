@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <div style="text-align:center;">
+<h1 style="Color:blue">Learner's Academy</h1>
+<h2>Admin Login</h2>
+<form action="UserProfile" method="post">
+<table border="1" style="text-align:center; margin-left:auto;margin-right:auto;" > 
+<tr><td><br/>&nbsp; User Name : <input type="text" name="username">&nbsp;&nbsp;<br/><br/>
+&nbsp;&nbsp;Password&nbsp;&nbsp;&nbsp;:&nbsp;<input type="password" name="password">&nbsp;&nbsp;<br/><br/></td></tr>
+<tr><td><input type="submit" value="Login"></td></tr>
+</table>
+</form>
+</div>-->
+<form class="sign-up" action="AdminServlet" method="post">
+    <h1 class="sign-up-title">Login</h1>
+    
+    <div style="color: red;font-weight: bold;">
+    <%
+        if(request.getAttribute("errormsg") != null)
+        	out.print(request.getAttribute("errormsg"));
+    %>
+    </div>
+    <input type="text" name="userid" class="sign-up-input" placeholder="Enter your username?" autofocus required="required">
+    <input type="password" name="password" class="sign-up-input" placeholder="Type Your password" required="required" >
+    <input type="submit" value="Login!" class="sign-up-button">
+  </form>
+</body>
+</html>

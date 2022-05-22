@@ -1,0 +1,39 @@
+<%@ page import="ansari.*" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Welcome To Assign To Insert Class
+
+<%
+
+String studentname=request.getParameter("student");
+String classname=request.getParameter("class1");
+
+
+Student student1=new Student();
+student1.setsFirstName(studentname);
+ClassForStudent class1=new ClassForStudent();
+class1.setClassName(classname);
+
+ClassDAO dao=new ClassDAO();
+
+int row=dao.insertStudentClass(class1);
+if(row>0){
+	out.println("Class Saved Successfully");
+	RequestDispatcher rd=request.getRequestDispatcher("AddNewClass.jsp");
+    rd.forward(request, response);
+	
+}else{
+		out.println("Class Not Saved");
+}
+
+
+%>
+</body>
+</html>

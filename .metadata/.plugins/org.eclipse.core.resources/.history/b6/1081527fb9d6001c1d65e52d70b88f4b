@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+
+int tid=Integer.parseInt(request.getParameter("tid"));
+String tFirstName=request.getParameter("tfirstname");
+String tLastName=request.getParameter("tlastname");
+String tDob=request.getParameter("tdob");
+String tAddress=request.getParameter("taddress");
+String tPhone=request.getParameter("tphone");
+String tDesignation=request.getParameter("tdesignation");
+
+out.println("Browser To Jsp");
+ 
+ Teachers teacher1=new Teachers();
+ teacher1.
+ stud1.setSid(sid);
+ stud1.setsFirstName(sFirstName);
+ stud1.setsLastName(sLastName);
+ stud1.setsDob(sDob);
+ stud1.setsAddress(sAddress);
+ stud1.setsPhone(sPhone);
+ stud1.setsClass(sClass);
+ StudentDAO dao=new StudentDAO();
+ int row=dao.insertStudent(stud1);
+
+if(row>0){
+	out.println("Student Added Successfully");
+	
+}else{
+		out.println("Student Not Added");
+}*/
+
+%>
+</body>
+</html>

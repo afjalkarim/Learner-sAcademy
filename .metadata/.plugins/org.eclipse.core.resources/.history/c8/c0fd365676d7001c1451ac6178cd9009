@@ -1,0 +1,54 @@
+<%@ page import="ansari.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div style="text-align:center;">
+<h3 style="Color:blue">Learner's Academy</h3>
+<h4 style="Color:brown">Welcome To Admin Dashboard</h4>
+</div><hr>
+<h1>Assign Student To Class</h1>
+<form action="insertClassToStudent.jsp" method="post">
+<table   style="text-align:center;  margin-left:auto;margin-right:auto;">
+<% StudentDAO dao=new StudentDAO();
+List<Student> studentpojo=(List<Student>)dao.viewName();
+%>
+
+<tr>
+<td>Select Student
+<Select name="student">
+<% for(Student c:studentpojo){ %>  
+<option>
+<%=c.getsFirstName()%>
+</option>
+<%} %>
+</Select>"</td>
+</tr>
+
+<tr>
+<td>Select Class
+<Select name="class">
+<% for(ClassForStudent c1:classpojo1){ %>  
+<option>
+<%=c.getClassName()%>
+</option>
+<%} %>
+</Select>"</td>
+</tr>
+</tr>
+</table>
+<div style="text-align:center;">
+<h3 style="Color:blue"><input type="submit" value="Assign"></h3>
+</div>
+</form>
+</div>
+</body>
+</html>

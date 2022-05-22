@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div style="text-align:center;">
+<h3 style="Color:blue">Learner's Academy</h3>
+<h4 style="Color:brown">Welcome To Admin Dashboard</h4>
+<h4>Add New Class</h4>
+</div>
+<form>
+Class Id : <input type="text" name="classid"><br>
+Class Name : <input type="text" name="classname"><br>
+<input type="submit" value="Save">
+</form>
+</div>
+
+</body>
+</html>
